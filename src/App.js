@@ -8,7 +8,7 @@ import Login from './MyComponents/Login'
 import Layout from './MyComponents/Layout'
 import Voice from './MyComponents/Voice'
 import Count from './MyComponents/Count'
-
+import File from './MyComponents/File'
 
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
       <Route path="Header" element={<Header />} />
       <Route path="Voice" element={<Voice/>}/>   
       <Route path="Count" element={<Count/>}/> 
+      <Route path="File" element={<File/>}/> 
         </Route>
       </Routes>
     </BrowserRouter>
