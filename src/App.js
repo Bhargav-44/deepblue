@@ -1,31 +1,46 @@
-// import logo from './logo.svg';
-import './App.css';
-import Header from './MyComponents/Header';
-// import Todos from './MyComponents/Todos';
-// import Footer from './MyComponents/Footer';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from './MyComponents/Login'
-import Layout from './MyComponents/Layout'
-import Voice from './MyComponents/Voice'
-import Count from './MyComponents/Count'
-import File from './MyComponents/File'
+import React, {useState} from 'react';
+import LoginForm from './MyComponents/LoginForm';
 
 
 function App() {
+  const adminUser = {
+    email: "email@example.com",
+    password: "admin123"
+  };
+
+  const [user, setUser] = useState({name: "", email: ""});
+  const [error, setError] = useState("");
+
+  const Login = details => {
+    console.log(details);
+
+    if(details.email == adminUser.email && details.password == adminUser.password){
+      console.log("Logged in");
+      setUser({
+        name: details.name,
+        email: details.email
+      })
+    } else{
+      console.log("Details not matched");
+      setError("Details not matched");
+    }
+  }
+
+  const Logout = () => {
+    setUser({name:"", email:""});
+  }
   return (
-    <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<Layout />}>
-      <Route path="Login" element={<Login />} />
-      <Route path="Header" element={<Header />} />
-      <Route path="Voice" element={<Voice/>}/>   
-      <Route path="Count" element={<Count/>}/> 
-      <Route path="File" element={<File/>}/> 
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  
-    
+    <div className="App">
+      {(user.email != "") ? (
+        <div className='welcome'>
+          <h2>Welcome, <span>{user.name}</span></h2>
+          <button onClick={Logout}>Logout</button>
+        </div>
+      ) : (
+        <LoginForm Login={Login} error={error}/>
+      )}
+    </div>
+
   );
 }
 
