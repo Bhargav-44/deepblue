@@ -31,6 +31,8 @@ function App() {
   }
   return (
     <div className="App">
+      <div class="layer1"></div>
+      <div class="layer2"></div>
       {(user.email != "") ? (
         <div className='welcome'>
           <h2>Welcome, <span>{user.name}</span></h2>
@@ -43,5 +45,7 @@ function App() {
 
   );
 }
+// edited by me 
 
+// edited by me 
 export default App;
