@@ -32,6 +32,8 @@ function App() {
   }
   return (
     <div className="App">
+      <div class="layer1"></div>
+      <div class="layer2"></div>
       {(user.email != "") ? (
         <div className='voice'>
           <Voice name={user.name}/>
@@ -43,5 +45,7 @@ function App() {
 
   );
 }
+// edited by me 
 
+// edited by me 
 export default App;

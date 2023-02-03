@@ -6,6 +6,10 @@
 
 }
 
+/* edited by me */
+
+/* edited by me */
+
 input, button {
   appearance: none;
   background: none;
@@ -18,12 +22,50 @@ input, button {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #53565A;
+  background-image: linear-gradient(-60deg, #bc9bff 50%, #0199ff 50%);
+  /* animation: slide 3s ease-in-out infinite alternate; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -50%;
+  right: -50%;
+  opacity: 0.5;
+  z-index: -1;
+  
   background-color: #666;
 }
+
+/* @keyframes slide {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+} */
+
+
 
 form{
   display: block;
   position: relative;
+
+}
+
+form::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
 }
 
 form::after{
