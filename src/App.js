@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import LoginForm from './MyComponents/LoginForm';
+import Voice from './MyComponents/Voice';
 
 
 function App() {
@@ -34,9 +35,8 @@ function App() {
       <div class="layer1"></div>
       <div class="layer2"></div>
       {(user.email != "") ? (
-        <div className='welcome'>
-          <h2>Welcome, <span>{user.name}</span></h2>
-          <button onClick={Logout}>Logout</button>
+        <div className='voice'>
+          <Voice name={user.name}/>
         </div>
       ) : (
         <LoginForm Login={Login} error={error}/>

@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: montserrat, sans-serif;
+
 }
 
 /* edited by me */
@@ -32,6 +33,7 @@ input, button {
   opacity: 0.5;
   z-index: -1;
   
+  background-color: #666;
 }
 
 /* @keyframes slide {
@@ -159,4 +161,33 @@ form .form-inner input[type="submit"]:hover, .welcome button:hover {
 .welcome h2 span{
   color:#FE4880;
   font-weight: 700;
+}
+
+.voice button {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #ffce00 50%, #ffce00 50%, #fe4880);
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.voice button:hover{
+  background-position: 100% 0%;
+}
+.voice p{
+  font-size: 30px;
+  font-family: montserrat, sans-serif;
+  margin-top: 20px;
+  font-weight: 800;
+  position: relative;
+  display: block;
+  background-color: #f8f8f8;
+  padding: 30px;
+  z-index: 2;
 }
