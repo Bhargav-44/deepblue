@@ -36,9 +36,9 @@ const Voice = (props) => {
       <button onClick={SpeechRecognition.stopListening}>Stop</button>
       <button onClick={resetTranscript}>Reset</button>
       <p>{transcript}</p>
-      <div className='welcome'>
-        {(transcriptValue==pass) ? (<Welcome name={props.name}/>):(<p>Try again</p>)}
-      </div>
+       
+        {(transcriptValue==pass) ? (SpeechRecognition.stopListening, <Welcome name={props.name} user = {props.user}/>):(<p>Try again</p>)}
+      
     </div>
   );
 };
